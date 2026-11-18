@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { initialState } from "../shared/inventory.js";
 import { applyCommand } from "./commands.js";
 
-// Single development server only. Production uses Redis.
+// Single development server only. Production uses MongoDB.
 export function localStore(directory) {
   const filename = join(directory, "workspace.json");
   let pending = Promise.resolve();
